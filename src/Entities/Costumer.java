@@ -17,7 +17,7 @@ public class Costumer {
 
 
     //costruttori
-    Costumer(String name, Integer tier) {
+    public Costumer(String name, Integer tier) {
         this.id = RandomIdsup.get();
         this.name = name;
         this.tier = tier;

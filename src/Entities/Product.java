@@ -18,7 +18,7 @@ public class Product {
 
     //costruttori
 
-    Product(String name, String category, double price) {
+    public Product(String name, String category, double price) {
 
         this.id = RandomIdsup.get();
         this.name = name;
@@ -46,5 +46,18 @@ public class Product {
 
     public String getCategory() {
         return category;
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "RandomIdsup=" + RandomIdsup +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

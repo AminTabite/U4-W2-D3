@@ -1,4 +1,5 @@
 import Entities.Costumer;
+import Entities.Order;
 import Entities.Product;
 
 import java.util.ArrayList;
@@ -23,6 +24,11 @@ public class Main {
         Product articolo10 = new Product("The witcher", "Book", 205.99);
         Product articolo11 = new Product("Narnia ", "Book", 75.99);
         Product articolo12 = new Product("Harry potter", "Book", 199.99);
+        Product articolo13 = new Product("Pannolini", "Baby", 5.99);
+        Product articolo14 = new Product("Pijiama", "Baby", 7.99);
+
+
+        Order ordine1 = new Order(12 / 06 / 2022, 22 / 5 / 2022, Listaprodotti, "Giannimorandi");
 
 
         List<Product> Listaprodotti = new ArrayList<>();
@@ -39,6 +45,8 @@ public class Main {
         Listaprodotti.add(articolo10);
         Listaprodotti.add(articolo11);
         Listaprodotti.add(articolo12);
+        Listaprodotti.add(articolo13);
+        Listaprodotti.add(articolo14);
 
 
         Listaprodotti.stream().filter(product -> product.getCategory().equals("Book") && product.getPrice() > 100);
@@ -49,6 +57,15 @@ public class Main {
                 .toList();
 
         libriCostosi.forEach(System.out::println);
+        libriCostosi.stream().toList();
+
+
+        Listaprodotti.stream().filter(product -> product.getCategory().equals("Baby"));
+        Listaprodotti.stream().toList();
+
+        List<Product> babyproducts = Listaprodotti.stream().toList();
+
+        babyproducts.forEach(System.out::println);
 
 
     }
